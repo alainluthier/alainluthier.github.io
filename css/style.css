@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Karla&display=swap');
+#content{
+    max-width:760px;   
+    margin: 0 auto;
+    font-family: 'Fira Sans', Arial, sans-serif;
+    font-size: 18px;
+  }
+header,footer{
+    background-color: rgb(8, 88, 141);
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+}
+header {
+    margin-top: 2em;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+}
+main{
+    margin: 4em 1em 4em 1em;
+}
+footer {
+    padding: 1em 1.5em 0.1em 1.5em;
+}
+header img{
+    float: right;
+    max-width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    color: rgb(63, 200, 235)
+}
+footer p{
+    color:yellow;
+}
