@@ -1,0 +1,48 @@
+#content {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+header,
+footer {
+    background-color: rgb(8, 88, 141);
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+}
+
+h1,
+h2 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    margin-top: 2em;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+}
+
+main {
+    margin: 4em 1em 4em 1em;
+}
+
+footer {
+    padding: 1em 1.5em 0.1em 1.5em;
+}
+
+header img {
+    max-width: 200px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: rgb(63, 200, 235)
+}
+
+footer p {
+    color: yellow;
+}
