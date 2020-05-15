@@ -1,0 +1,165 @@
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,p {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1,
+h2,h3,h4 {
+    font-family: 'Nunito', sans-serif;
+}
+div#headerWrapper {background-color: #acdde7;}
+header {
+    padding: .5rem 2%;
+    background-color: #acdde7;
+    display: flex;
+}
+
+header img {
+    margin-right: 10px;
+    width: 50px;
+}
+.headings{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+div#navWrapper {background-color: #208aae;}
+nav {
+    background-color: #208aae;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #eee;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    
+}
+
+nav ul li a:hover {
+    background-color: #8ea8c3;
+    color: #111;
+}
+
+nav ul li.active a {
+    background-color: rgb(11, 28, 83);
+    color: #fff;
+}
+nav ul.hide {
+    display: none;
+}
+main {
+    padding: 0 2% 2rem 2%;
+    min-height: 10rem;
+}
+
+main a {
+    text-decoration: none;
+    color: rgb(8, 30, 88);
+}
+main div{
+    background-color: #8ea8c3;
+    margin: 2rem 0;
+    padding: 1rem 2%;
+}
+
+div#footerWrapper {background-color: #208aae;}
+footer {
+    background-color:#208aae;
+    padding: .5rem 2%;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #8ea8c3;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+}
+
+.primary {
+    background-color: #208aae;
+}
+
+.secondary {
+    background-color: #0d2149;
+    color:white;
+}
+
+.accent1 {
+    background-color: #8ea8c3;
+}
+
+.accent2 {
+    background-color: #acdde7;
+}
+
+.img1{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img2{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.colored{
+    background-color:#acdde7;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
