@@ -1,0 +1,251 @@
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,p {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1,
+h2,h3,h4 {
+    font-family: 'Nunito', sans-serif;
+}
+
+div.showme{
+    display: block;
+}
+div.hideme{
+    display: none;
+}
+div#message{
+    background: radial-gradient(rgb(240, 218, 119), #d3c82c);
+    text-align: center;
+    padding: 0.5rem 2%;
+}
+
+div#headerWrapper {background-color: #acdde7;}
+header {
+    padding: .5rem 2%;
+    background-color: #acdde7;
+    display: flex;
+}
+
+header img {
+    margin-right: 10px;
+    width: 50px;
+}
+.headings{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+div#navWrapper {background-color: #208aae;}
+nav {
+    background-color: #208aae;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #eee;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    
+}
+
+nav ul li a:hover {
+    background-color: #8ea8c3;
+    color: #111;
+}
+
+nav ul li.active a {
+    background-color: rgb(11, 28, 83);
+    color: #fff;
+}
+nav ul.hide {
+    display: none;
+}
+
+section.forecast{display:none;}
+main {
+    padding: 0 2% 0 2%;
+    min-height: 10rem;
+}
+.herodiv{
+    margin: 10px auto 30px auto;
+    position: relative;
+}
+.herodiv img{
+    width: 100%;
+}
+.weather{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 1rem;
+    border-radius: 5%;
+    background-color: #208aae;
+    box-shadow: 0 0 30px #111;
+    opacity: 0.85;
+}
+.weather h3{
+    margin: 0;
+    color:white;
+}
+.weather table td:nth-child(1) {  
+    text-align: right;
+    color:white;
+  }
+  .weather table td:nth-child(2) {  
+    text-align: right;
+    color:yellow;
+  }
+.title{
+    text-align: center;
+}
+
+main article{
+    background-color: #d6dfe7;
+    padding: 25px 0;
+}
+
+main article img{
+    display: flex;
+    margin: 0 auto;
+    top: 25px;
+    width: 80%;
+    box-shadow: 0 0 30px #111;
+}
+main article h2{
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+    padding-left:2%;
+    padding-right:2%;
+}
+main article p{
+    padding: 0.5rem 2%;
+}
+main article span{
+    font-style: italic;
+    font-size: 0.8rem;
+    padding: 0.5rem 2%;
+}
+
+main a {
+    text-decoration: none;
+    color: rgb(8, 30, 88);
+}
+.contactContainer{
+    background-color: #8ea8c3;
+    margin-top: 25px;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+.contactContainer h2{
+    font-size: 1.2rem;
+    padding: 0.2rem 2%;
+}
+.contact h4, .contact p{
+    margin: 0;
+    padding: 0.1rem 2%;
+}
+.contact img{
+    display: none;
+}
+div#footerWrapper {background-color: #208aae;}
+footer {
+    background-color:#208aae;
+    margin-top: 0;
+    padding: .5rem 2%;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #8ea8c3;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+}
+
+.primary {
+    background-color: #208aae;
+}
+
+.secondary {
+    background-color: #0d2149;
+    color:white;
+}
+
+.accent1 {
+    background-color: #8ea8c3;
+}
+
+.accent2 {
+    background-color: #acdde7;
+}
+
+.img1{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img2{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.colored{
+    background-color:#acdde7;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
