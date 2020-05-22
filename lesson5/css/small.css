@@ -125,9 +125,11 @@ main {
 .weather table td:nth-child(1) {  
     text-align: right;
     color:white;
+    padding-right: 2%;
   }
   .weather table td:nth-child(2) {  
-    text-align: right;
+    padding-left: 2%;
+    text-align: left;
     color:yellow;
   }
 .title{
