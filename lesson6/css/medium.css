@@ -62,11 +62,10 @@
         display:grid;
         grid-template-columns: 1fr 1fr;
     }
-    .contact img{
+    .mapouter{
         display: block;
         width: 320px;
         margin: 0 2%;
-        border: solid 2px;
         justify-self: end;
     }
     .contact section{
