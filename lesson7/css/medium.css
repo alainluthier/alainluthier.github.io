@@ -25,6 +25,11 @@
     nav ul.hide{
         display: block;
     }
+    /*BEGIN gallery.html*/
+    div.gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    /*END gallery.html*/
     section.forecast{
         width: 480px;
         display: grid;

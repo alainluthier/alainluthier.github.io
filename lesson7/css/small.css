@@ -80,8 +80,8 @@ nav ul li a {
     font-size: .9rem;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    /*transition-property: color, background-color;
-    transition-duration: 800ms;*/
+    transition-property: color, background-color;
+    transition-duration: 800ms;
 }
 
 nav ul li a:hover {
@@ -102,6 +102,24 @@ main {
     padding: 0 2% 0 2%;
     min-height: 10rem;
 }
+/*BEGIN gallery.html*/
+div.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    margin-bottom: 2rem;
+}
+.gallery img{
+    width: 100%;
+}
+
+figcaption {
+    font-size: smaller;
+    padding: 0.5rem 2%;
+
+}
+/*END gallery.html*/
 .herodiv{
     margin: 10px auto 30px auto;
     position: relative;
