@@ -1,0 +1,64 @@
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu', 'sans-serif';
+}
+header, main{
+    max-width: 400px;
+    margin: 0 auto;
+    
+}
+
+table.mytable {
+    width: 360px;
+    text-align: center;
+    font-size: 18px;
+}
+table.mytable, th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+thead tr td{
+    padding: 0.5rem 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #7fb9c2;
+}
+tbody tr th{
+    color: white;
+    background-color: #628ca6;
+}
+tbody tr:nth-child(even) td{
+    background-color: #e7f0ed;
+}
+tbody tr:nth-child(odd) td{
+    background-color: #e7ffed;
+}
+tbody tr th, tbody tr td{
+    padding: 0.5rem 2%;
+}
+tbody tr th:nth-child(1),
+tbody tr td:nth-child(1) {
+    width: 100px;
+}
+tbody tr th:nth-child(2),
+tbody tr td:nth-child(2){
+    width: 50px;
+}
+tbody tr th:nth-child(3),
+tbody tr td:nth-child(3) {
+    width: 90px;
+}
+tbody tr:nth-child(5) td:nth-child(3){
+    background-color: #628ca6;
+    color: white;
+}
+tfoot tr td{
+    padding: 0.5rem 2%;
+    font-size: 0.8rem;
+    background-color: #7fb9c2;
+}
