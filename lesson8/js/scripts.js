@@ -1,3 +1,8 @@
+/*FORM*/ 
+function adjustRating(rating) {
+    document.getElementById("stormValue").innerHTML = rating;
+}
+
 WebFont.load({
     google: {
       families: ["Nunito","Ubuntu"]

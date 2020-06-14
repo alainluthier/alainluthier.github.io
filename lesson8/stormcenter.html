@@ -27,108 +27,73 @@
             <button onclick="toogleButton()" >&#9776;</button>
             <ul id="primaryNav" class="hide">
                 <li><a href="#">Home</a></li>
-                <li class="active"><a href="preston.html">Preston</a></li>
+                <li><a href="preston.html">Preston</a></li>
                 <li><a href="#">Soda Springs</a></li>
                 <li><a href="#">Fish Haven</a></li>
-                <li><a href="#">Storm Center</a></li>
+                <li class="active"><a href="#">Storm Center</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
     </div>
     <main>
-        <h2 class="title">Preston, Idaho</h2>
-        <div class="herodiv">
-            <picture class="myphoto">
-                <source srcset="images/hero500.jpg" media = "(min-width: 560px) and (max-width: 1027px)">
-                    <source srcset="images/hero800.jpg" media = "(min-width: 1028px)">
-                <img src="images/hero300.jpg" alt="preston">
-            </picture>
-            <!--
-            <figure class="myphoto">
-                <img src="images/hero800.png" alt="preston" sizes="100vw"
-                srcset="images/hero300.jpg 500w, 
-                        images/hero500.jpg 800w, 
-                        images/hero800.jpg 1100w">
-            </figure>
-            -->
-            <section class="weather">
-                <h3>Weather Summary</h3>
-                <hr>
-                <table>
-                    <tr>
-                        <td>Currently:</td>
-                        <td>Sunny</td>
-                    </tr>
-                    <tr>
-                        <td>High:</td>
-                        <td> <span id='temperature'>41  </span>&deg;F</td>
-                    </tr>
-                    <tr>
-                        <td>Wind Chill:</td>
-                        <td><span id="chill"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Humidity</td>
-                        <td>10 %</td>
-                    </tr>
-                    <tr>
-                        <td>Wind Speed:</td>
-                        <td> <span id="windSpeed">8</span>mph</td>
-                    </tr>
-                    
-                </table>
-            </section>
-        </div>
-        <section class="forecast">
-            <div>
-                <h5>Monday</h5>
-                <img src="images/sun.png" alt="sun">
-                <p>45&deg; F</p>
-            </div>
-            <div>
-                <h5>Tuesday</h5>
-                <img src="images/sun.png" alt="sun">
-                <p>46&deg; F</p>
-            </div>
-            <div>
-                <h5>Wenesday</h5>
-                <img src="images/sun.png" alt="sun">
-                <p>41&deg; F</p>
-            </div>
-            <div>
-                <h5>Thursday</h5>
-                <img src="images/cloudy.png" alt="cloudy">
-                <p>40&deg; F</p>
-            </div>
-            <div>
-                <h5>Friday</h5>
-                <img src="images/rain.png" alt="rain">
-                <p>38&deg; F</p>
-            </div>
-        </section>
-        <article class="clearfix">
-            <img src="images/snow.jpg" alt="snow La Paz">
-            <h2>Article Title</h2>
-            <span>by Hansen Muhile</span>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore libero laborum itaque repellendus voluptatem. Facilis nisi architecto quaerat eaque rerum, ullam illum optio. Quisquam corporis ipsum, quasi voluptas amet exercitationem distinctio pariatur enim ab. Libero eveniet exercitationem illo, molestias repudiandae assumenda cum blanditiis. Sint deserunt porro quod distinctio debitis eveniet dolore iste! Modi voluptas saepe aliquam possimus dolores incidunt quo in, autem laudantium earum, ab harum maiores suscipit a aut facilis. Soluta nobis numquam perferendis deleniti adipisci, saepe repellat hic?</p>
-        </article>
-        <div class="contactContainer">
-            <h2>Contact Us</h2>
-            <div class="contact">
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe width="320" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=Av.%20Illimani&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-                    </div>
-                </div>
-                <section>
-                    <h4>Digital Weather</h4>
-                    <p>Avenue Illimani #445 </p>
-                    <p>&#9742;(591)-22884137</p>
-                    <p>&#9993;contact@digitalweather.org</p>
-                </section>
-            </div>
-        </div>
+        <h2 class="titleB">Storm Center Report</h2>
+        <form action="thanks.html" method="GET">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label class="top">Full Name* <input type="text" name="fname" minlength="5" pattern="^[A-Za-z -]+$" required></label>
+                <label class="top">Email* <input type="email" name="email" placeholder="someone@mail.com" required></label>
+                <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label class="top">Zip Code* <input type="number" name="zcode" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Storm Information</legend>
+                <label class="top">Storm Date<input type="date" name="stormDate"></label>
+                <label class="top">Storm type
+                    <input list="storms" name="stormType">
+                    <datalist id="storms">
+                        <option value="Flash Flood">
+                        <option value="Hail">
+                        <option value="Hurricane">
+                        <option value="Thunderstorm">
+                        <option value="Tornado">
+                    </datalist>
+                </label>
+                <label class="topB">
+                    Storm Severity: <span id="stormValue">6</span>
+                    <input type="range" id="sSeverity" name="stormSerevity" min="1" max="10" step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                    <datalist id="tickmarks">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                    </datalist>
+                </label>
+                <label class="top">
+                    Storm Region
+                    <select name="stormRegion">
+                        <option value="">Select Region... &#9662;</option>
+                        <option value="Preston">Preston</option>
+                        <option value="Soda Spring">Soda Spring</option>
+                        <option value="Fish Haven">Fish Haven</option>
+                    </select>
+                </label>
+                    <div>Are you in Danger?</div>
+                    <label class="sbs"><input type="radio" name="audience" value="beginner"> Yes</label>
+                    <label class="sbs"><input type="radio" name="audience" value="beginner"> Maybe</label>
+                    <label class="sbs"><input type="radio" name="audience" value="beginner"> No</label>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information or Comments</legend>
+                <textarea name="moreInfo" cols="30" rows="5" placeholder="Enter additional information or comments here"></textarea>
+            </fieldset>
+            <input class="submitBtn" type="submit" value="Report Storm">
+        </form>
     </main>
     <div id="footerWrapper">
         <footer>
