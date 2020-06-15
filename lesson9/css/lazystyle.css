@@ -1,0 +1,24 @@
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+}
+header, main{
+    max-width: 400px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+img[data-src] {
+    filter: blur(0.2em);
+}
+img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+}

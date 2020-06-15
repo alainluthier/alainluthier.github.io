@@ -1,0 +1,28 @@
+/* 64em is also 1028px when basefont is 16px */
+@media only screen and (min-width: 64rem) {
+    nav ul li a{
+        padding: 0.6rem 1rem;
+    }
+    header, nav, main, footer{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+     /*BEGIN gallery.html*/
+    div.gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    div.gallery figure{
+        
+        transition-property: box-shadow;
+        transition-duration: 0.5s;
+    }
+    
+    div.gallery figure:hover {
+        box-shadow: 0 0 20px #333;
+    }
+    /*END gallery.html*/
+    /*FORM BEGIN*/
+    form label.sbs{
+        padding: .4rem 0;
+    }
+} /*end large */
