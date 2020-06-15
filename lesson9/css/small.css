@@ -210,6 +210,38 @@ form input.submitBtn:hover{
     text-align: center;
 }
 /* END FORM*/
+/* ==== MAIN =====*/
+div.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color:#fff;
+    text-align: center;
+    grid-gap: 1.5rem;
+    margin: 2rem 0;
+}
+div.cards section{
+    background-color: #d6dfe7;
+}
+div.data h2, div.cards h4{
+    margin: 0 2%;
+
+}
+div.data h2{
+    padding-top: 1rem;
+}
+div.data h4{
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.75rem;
+}
+div.cards img{
+    margin: 0 auto;
+    padding: 0.75rem;
+    width: 100%;
+
+}
+
+/* ==== END MAIN =====*/
 .herodiv{
     margin: 10px auto 30px auto;
     position: relative;

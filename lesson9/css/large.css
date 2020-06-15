@@ -25,4 +25,12 @@
     form label.sbs{
         padding: .4rem 0;
     }
+    /*INDEX*/
+    div.cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    div.cards section {
+        display: block;
+    }
+    /*END INDEX*/
 } /*end large */

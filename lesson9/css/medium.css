@@ -77,7 +77,19 @@
         align-self: center;
         justify-self: center;
     }
-
+/* ====== index ===== */
+div.cards section{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+div.cards section:nth-child(even) img {
+	grid-column: 1;
+}
+div.cards section:nth-child(even) .data {
+	grid-column: 2;
+	grid-row: 1;
+}
+/* ===== INDEX===== */
 
 } /*end medium */
 
