@@ -36,7 +36,7 @@
         </nav>
     </div>
     <main>
-        <h2 class="title">Preston, Idaho</h2>
+        <h2 class="title" id ="town">Preston, Idaho</h2>
         <div class="herodiv">
             <picture class="myphoto">
                 <source srcset="images/hero500.jpg" media = "(min-width: 560px) and (max-width: 1027px)">
@@ -57,11 +57,11 @@
                 <table>
                     <tr>
                         <td>Currently:</td>
-                        <td>Sunny</td>
+                        <td><span id='currently'></span></td>
                     </tr>
                     <tr>
                         <td>High:</td>
-                        <td> <span id='temperature'>41  </span>&deg;F</td>
+                        <td> <span id='temperature'></span> &deg;F</td>
                     </tr>
                     <tr>
                         <td>Wind Chill:</td>
@@ -69,42 +69,18 @@
                     </tr>
                     <tr>
                         <td>Humidity</td>
-                        <td>10 %</td>
+                        <td><span id="humidity"></span> %</td>
                     </tr>
                     <tr>
                         <td>Wind Speed:</td>
-                        <td> <span id="windSpeed">8</span>mph</td>
+                        <td> <span id="windSpeed"></span>mph</td>
                     </tr>
                     
                 </table>
             </section>
         </div>
-        <section class="forecast">
-            <div>
-                <h5>Monday</h5>
-                <img src="images/sun.png" alt="sun">
-                <p>45&deg; F</p>
-            </div>
-            <div>
-                <h5>Tuesday</h5>
-                <img src="images/sun.png" alt="sun">
-                <p>46&deg; F</p>
-            </div>
-            <div>
-                <h5>Wenesday</h5>
-                <img src="images/sun.png" alt="sun">
-                <p>41&deg; F</p>
-            </div>
-            <div>
-                <h5>Thursday</h5>
-                <img src="images/cloudy.png" alt="cloudy">
-                <p>40&deg; F</p>
-            </div>
-            <div>
-                <h5>Friday</h5>
-                <img src="images/rain.png" alt="rain">
-                <p>38&deg; F</p>
-            </div>
+        <section class="forecast" id = "weatherforecast">
+            
         </section>
         <article class="clearfix">
             <img src="images/snow.jpg" alt="snow La Paz">
@@ -137,5 +113,6 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/weatherApiPreston.js"></script>
 </body>
 </html>

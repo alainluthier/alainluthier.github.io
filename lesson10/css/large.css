@@ -16,7 +16,10 @@
         transition-property: box-shadow;
         transition-duration: 0.5s;
     }
-    
+    section.forecast{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
     div.gallery figure:hover {
         box-shadow: 0 0 20px #333;
     }
