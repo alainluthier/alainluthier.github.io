@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lazy Load</title>
+    <link rel="stylesheet" href="css/lazystyle.css">
+</head>
+<body>
+    <header>
+        <h1>Progressive Loading(images)</h1>
+    </header>
+    <main>
+        <picture>
+            <img src="images/placeholder.jpg" data-src="images/bird.jpg" alt="bird">
+        </picture>
+        <picture>
+            <img src="images/placeholder.jpg" data-src="images/wolf.jpg" alt="wolf">
+        </picture>
+        <picture>
+            <img src="images/placeholder.jpg" data-src="images/lion.jpg" alt="lion">
+        </picture>
+        <picture>
+            <img src="images/placeholder.jpg" data-src="images/dog.jpg" alt="dog">
+        </picture>
+        <picture>
+            <img src="images/placeholder.jpg" data-src="images/turtle.jpg" alt="turtle">
+        </picture>
+        
+    </main>
+    <script src="js/imagehandling.js"></script>
+</body>
+</html>

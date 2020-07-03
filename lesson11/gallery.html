@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Weather</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+<body>
+    <div id ="message">Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion</div>
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img src="images/logo.png" alt="logo">
+            <section class="headings">
+                <h1>Digital Weather</h1>
+                <h2>Real-time data</h2>
+            </section>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toogleButton()" >&#9776;</button>
+            <ul id="primaryNav" class="hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li class="active"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h2 class="title">Weather Gallery</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/dawn.jpg" alt="Dawn">
+                <figcaption>Dawn sun mountain</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/landscape-nature.jpg" alt="Landscape Nature">
+                <figcaption>Landscape Nature</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/hill.jpg" alt="Hill">
+                <figcaption>Hill Blue Sky</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/shore-sunset.jpg" alt="Shore Sunset">
+                <figcaption>Landscape Shore Sunset</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/fog.jpg" alt="Fog Forest">
+                <figcaption>Fog Forest Dark Gloomy</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/thunderstorm.jpg" alt="Thunderstorm">
+                <figcaption>Thunderstorm Lightning</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/sky-clouds.jpg" alt="Sky Clouds">
+                <figcaption>Sky Clouds Atmosphere</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/ireland.jpg" alt="Ireland">
+                <figcaption>Ireland National Park</figcaption>
+            </figure>
+            <figure>
+                <img src="images/placeholder.jpg" data-src="images/sea.jpg" alt="Sea Thunderstorm">
+                <figcaption>Sea Thunderstorm</figcaption>
+            </figure>
+        </div>
+    </main>
+    <div id="footerWrapper">
+        <footer>
+            &copy; <span id="year"></span> | Alain R. Ramos | <span id="currentDate"></span>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/imagehandling.js"></script>
+</body>
+</html>
