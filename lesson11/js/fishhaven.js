@@ -1,4 +1,21 @@
-const apiWeatherURL = '//api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
+try {
+  const t = parseFloat(document.getElementById("temperature").textContent);
+  //console.log(t);
+  const s = parseFloat(document.getElementById("windSpeed").textContent);
+  //console.log(s);
+  let chill = 35.74 + 0.6215*t - 35.75*Math.pow(s,0.16) + 0.4275*t*Math.pow(s,0.16);
+  //console.log(chill);
+  if (t<=50 && s > 3){
+      document.getElementById("chill").textContent = Math.round(chill)+'°F';
+  }else{
+      document.getElementById("chill").textContent = "No today";
+  }
+}
+catch (e) {
+  
+}
+
+const apiWeatherURL = '//api.openweathermap.org/data/2.5/weather?id=5585000&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
 fetch(apiWeatherURL)
   .then((response) => response.json())
   .then((jsObject) => {
@@ -18,7 +35,7 @@ weekdayList[3]="Wednesday";
 weekdayList[4]="Thursday";
 weekdayList[5]="Friday";
 weekdayList[6]="Saturday";
-const apiForecastURL = '//api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
+const apiForecastURL = '//api.openweathermap.org/data/2.5/forecast?id=5585000&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
 
 fetch(apiForecastURL)
   .then((response) => response.json())

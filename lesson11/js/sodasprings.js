@@ -15,7 +15,7 @@ catch (e) {
   
 }
 
-const apiWeatherURL = '//api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
+const apiWeatherURL = '//api.openweathermap.org/data/2.5/weather?id=5607916&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
 fetch(apiWeatherURL)
   .then((response) => response.json())
   .then((jsObject) => {
@@ -35,7 +35,7 @@ weekdayList[3]="Wednesday";
 weekdayList[4]="Thursday";
 weekdayList[5]="Friday";
 weekdayList[6]="Saturday";
-const apiForecastURL = '//api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
+const apiForecastURL = '//api.openweathermap.org/data/2.5/forecast?id=5607916&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
 
 fetch(apiForecastURL)
   .then((response) => response.json())
