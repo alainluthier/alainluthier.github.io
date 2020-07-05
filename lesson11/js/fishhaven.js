@@ -41,7 +41,8 @@ fetch(apiForecastURL)
   .then((response) => response.json())
   .then((weatherinfo) => {
     console.log(weatherinfo);
-    document.getElementById("town").textContent = weatherinfo.city.name;
+    document.getElementById("town").textContent = 'Fish Haven';
+    //document.getElementById("town").textContent = weatherinfo.city.name;
     let mylist = weatherinfo.list;
     let forecastDayNumber = todayDayNumber;
     for(i=0;i<mylist.length;i++){

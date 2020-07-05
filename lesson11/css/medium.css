@@ -45,6 +45,10 @@
     main article h2{
         margin:0
     }
+    main h3{
+        margin-top: 0;
+        text-align: center;
+    }
     .contact{
         display:grid;
         grid-template-columns: 1fr 1fr;
