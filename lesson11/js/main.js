@@ -30,9 +30,18 @@ fetch(requestURL)
             div.appendChild(yearFounded);
             div.appendChild(currentPopulation);
             div.appendChild(averageRainfall);
-            card.appendChild(div)
+            card.appendChild(div);
             card.appendChild(photo);          
-            
+            let divUpcoming = document.createElement('div');
+            let title = document.createElement('h3');
+            title.textContent = "Upcoming Events";
+            divUpcoming.appendChild(title);
+            for(let j=0;j<towns[i].events.length;j++){
+              let event = document.createElement('p');
+              event.textContent = towns[i].events[j];
+              divUpcoming.appendChild(event);
+            }
+            card.appendChild(divUpcoming);
         }
     }
   });
