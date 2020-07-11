@@ -75,6 +75,9 @@ div.cards section:nth-child(even) .data {
 	grid-column: 2;
 	grid-row: 1;
 }
+div.upcoming section{
+    max-width: 300px;
+}
 /* ===== INDEX===== */
 
 } /*end medium */

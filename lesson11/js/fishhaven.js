@@ -15,6 +15,32 @@ catch (e) {
   
 }
 
+
+const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) { 
+    const towns = jsonObject['towns'];
+    for (let i = 0; i < towns.length; i++ ) {
+        if(towns[i].name == 'Fish Haven'){
+            let card = document.createElement('section');
+            let divUpcoming = document.createElement('div');
+            let title = document.createElement('h3');
+            title.textContent = "Upcoming Events";
+            divUpcoming.appendChild(title);
+            for(let j=0;j<towns[i].events.length;j++){
+              let event = document.createElement('p');
+              event.textContent = towns[i].events[j];
+              divUpcoming.appendChild(event);
+            }
+            card.appendChild(divUpcoming);
+            document.querySelector('div.upcoming').appendChild(card);  
+        }
+    }
+  });
+
 const apiWeatherURL = '//api.openweathermap.org/data/2.5/weather?id=5585000&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
 fetch(apiWeatherURL)
   .then((response) => response.json())
@@ -35,6 +61,8 @@ weekdayList[3]="Wednesday";
 weekdayList[4]="Thursday";
 weekdayList[5]="Friday";
 weekdayList[6]="Saturday";
+
+
 const apiForecastURL = '//api.openweathermap.org/data/2.5/forecast?id=5585000&units=imperial&APPID=6b9c5672320acb9a1bc5cae27fa01ef5';
 
 fetch(apiForecastURL)
