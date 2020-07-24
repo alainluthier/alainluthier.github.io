@@ -1,4 +1,4 @@
-const requestURL = 'http://127.0.0.1:5500/project/data/scooter.json';
+const requestURL = 'data/scooter.json';
 fetch(requestURL)
     .then(function (response) {
         return response.json();
