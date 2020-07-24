@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touristy Scooter</title>
+    <meta name="description" content="Touristy Scooter Webpage">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <img src="images/logo.png" alt="logo">
+            <h1>Touristy Scooter</h1>
+            <button onclick="toogleButton()" >&#9776;</button>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <ul id="primaryNav" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="herodiv">
+            <picture class="myphoto">
+                <source srcset="images/slide500.jpg" media = "(min-width: 560px) and (max-width: 1027px)">
+                    <source srcset="images/slide800.jpg" media = "(min-width: 1028px)">
+                <img src="images/slide300.jpg" alt="slide">
+            </picture>
+        </div>
+        <a class="mainButton" href="reservations.html">Make a Reservation</a>
+        <div class="cards">
+            <section>
+                <h2>Honda Motor Scooters</h2>
+                <img src="images/honda.jpg" alt="Honda">
+                <h3>Since $20</h3>
+            </section>
+            <section>
+                <h2>ATV Side-by-Side</h2>
+                <img src="images/atv.jpg" alt="ATV">
+                <h3>Since $50</h3>
+            </section>
+            <section>
+                <h2>Jeep Rentals</h2>
+                <img src="images/jeep.png" alt="Jeep">
+                <h3>Since $60</h3>
+            </section>
+        </div>
+        <section class="weather">
+            <h3>Current Weather</h3>
+                <hr>
+                <table>
+                    <tr>
+                        <td>Currently:</td>
+                        <td><span id='currently'></span></td>
+                    </tr>
+                    <tr>
+                        <td>High:</td>
+                        <td> <span id='temperature'></span> &deg;F</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td><span id="humidity"></span> %</td>
+                    </tr>
+                    <tr>
+                        <td>Wind Speed:</td>
+                        <td> <span id="windSpeed"></span>mph</td>
+                    </tr>
+                    
+                </table>
+        </section>
+        <h3 class="forecastTitle">Five Day Forecast</h3>
+        <section class="forecast" id = "weatherforecast">
+
+        </section>
+    </main>
+    <div id="footerWrapper">
+        <footer>
+            <div>
+                &copy; | Alain R. Ramos | <span id="currentDate"></span>
+            </div>
+            <section>
+                <img src="images/facebook.png" alt="facebook">
+                <img src="images/twitter.png" alt="twitter">
+                <img src="images/instagram.png" alt="instagram">
+            </section>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/cozumel.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals</title>
+    <meta name="description" content="Rentals of Touristy Scooter Webpage">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <img src="images/logo.png" alt="logo">
+            <h1>Touristy Scooter</h1>
+            <button onclick="toogleButton()" >&#9776;</button>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <ul id="primaryNav" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h2 class="title">Tours</h2>
+        <div class="cards">
+            <section>
+                <h2>Palancar, Columbia and Cielo Reefs</h2>
+                <img src="images/playa.jpg" alt="playa">
+                <p>Marine-life lovers can discover the colorful reefs off the coast of Cozumel from above and below the surface on a glass-bottom boat tour that stops for snorkeling at three different reefs. Each reef is home to a diverse array of marine life, making it possible to spot sea stars, sea turtles, nurse sharks, and vibrant schools of fish on each snorkeling venture.</p>
+            </section>
+            <section>
+                <h2>Private Marine Park Snorkel</h2>
+                <img src="images/private.jpg" alt="private">
+                <p>Experience Cozumel’s natural beauty on this snorkeling adventure to El Cielo. Head out on a 29-foot (9-meter) offshore powerboat with twin 350 HP outboards, then dive in with complimentary snorkel gear and explore the Caribbean’s magical waters. Check out a protected cove, El Cielo, take an optional fishing excursion, and enjoy fresh fruit, chips, guacamole, and beer—they’re included in the tour price.</p>
+            </section>
+            <section>
+                <h2>Jet Ski and Snorkel  Adventure Tour</h2>
+                <img src="images/jet.jpg" alt="jet">
+                <p>This tour provides the possibility of riding a jet ski and snorkeling in a reef full of life, as well as giving access to all the facilities of the San Francisco beach club. Includes food and drinks on a beautiful beach.</p>
+            </section>
+        </div>
+    </main>
+    <div id="footerWrapper">
+        <footer>
+            <div>
+                &copy; | Alain R. Ramos | <span id="currentDate"></span>
+            </div>
+            <section>
+                <img src="images/facebook.png" alt="facebook">
+                <img src="images/twitter.png" alt="twitter">
+                <img src="images/instagram.png" alt="instagram">
+            </section>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

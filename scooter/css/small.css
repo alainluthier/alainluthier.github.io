@@ -1,0 +1,364 @@
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,p {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,h3,h4,h5 {
+    font-family: 'Quicksand', sans-serif;
+}
+/*Header*/
+div#headerWrapper {background-color: #F1F7ED;}
+header {
+    padding: .5rem 2%;
+    background-color: #F1F7ED;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+header img {
+    margin-right: 10px;
+    width: 70px;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    align-self: center;
+}
+/*Navigation*/
+div.showme{
+    display: block;
+}
+div.hideme{
+    display: none;
+}
+div#navWrapper {
+    background-color: #60993E;
+}
+nav {
+    background-color: #60993E;
+}
+header button {
+    background-color: #60993E;
+    margin: .2rem 2%;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    background-color: #60993E;
+    display: block;
+    color: #eee;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transition-property: color, background-color;
+    transition-duration: 800ms;
+}
+nav ul li a:hover {
+    background-color: #8ea8c3;
+    color: #111;
+}
+nav ul li.active a {
+    background-color: #1F271B;
+    color: #fff;
+}
+nav ul.hide {
+    display: none;
+}
+/*Main*/
+.myphoto{
+    width: 100%;
+    margin: 0;
+}
+.myphoto img{
+    width: 100%;
+}
+.mainButton {
+    margin: 1rem auto;
+    max-width: 250px;
+	background-color:#60993E;
+	border-radius:28px;
+	border:1px solid #60993E;
+	display:block;
+    cursor:pointer;
+    font-family: 'Quicksand', sans-serif;
+	color:#fff;
+	font-size:1.2rem;
+	padding:16px 31px;
+    text-decoration:none;
+    text-align: center;	
+}
+.mainButton:hover {
+	background-color:#5cbf2a;
+}
+/*Cards in Index*/
+div.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color:#fff;
+    text-align: center;
+    grid-gap: 1.5rem;
+    margin: 2rem 0;
+}
+div.cards section{
+    background-color: #F1F7ED;
+}
+div.cards section h2{
+    margin: 0 2%;
+}
+div.cards section h2{
+    padding-top: 1rem;
+}
+div.cards section h3{
+    padding-top: 0;
+    margin-top:0;
+    padding-bottom: 1rem;
+}
+div.cards  section img{
+    margin: 0 auto;
+    padding: 0.75rem;
+    width: 100%;
+}
+/**/
+.weather{
+    padding: 1rem;
+    border-radius: 5%;
+    background-color: #60993E;
+    box-shadow: 0 0 30px #111;
+    margin: 0.5rem auto;
+    max-width: 250px;
+}
+.weather h3{
+    margin: 0;
+    color:white;
+}
+.weather table {
+    width: 200px;
+}
+.weather table th,
+.weather table td{
+  width: 100px;
+  overflow: hidden;
+}
+.weather table td:nth-child(1) {  
+    text-align: right;
+    color:white;
+    padding-right: 2%;
+  }
+  .weather table td:nth-child(2) {  
+    padding-left: 2%;
+    text-align: left;
+    color:yellow;
+  }
+/*Forecast*/
+.forecastTitle{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+section.forecast{
+    width: 250px;
+    display:grid;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F1F7ED;
+}
+section.forecast div{
+    text-align: center;
+    border: 1px solid #aaa;
+}
+section.forecast div img{
+    width: 64px;
+    margin-bottom: 0;
+}
+section.forecast div p{
+    margin-top: 0;
+}
+
+section.forecast h5{
+    background-color: #828A95;
+    margin:0;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+/*Title*/
+.title{
+    text-align: center;
+}
+
+/*Retals*/
+div.cards section div.reservation h3{
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+}
+div.cards section div.reservation p{
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+div.cards section div.walkin h3{
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+}
+div.cards section div.walkin p{
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+div.cards section div.walkin{
+    padding-bottom: 1rem;
+}
+div.cards section p {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+/*Forms*/
+form{
+    padding: 0.5rem 2%;
+}
+form fieldset{
+    margin: 2rem 0;
+    border: 1px solid rgb(11, 28, 83);
+    border-radius: 10px;
+    padding: .5rem 2%;
+    background-color: #d6dfe7;
+}
+form legend{
+    color: rgb(11, 28, 83);
+    margin-bottom: 1rem;
+    float: left;
+    width: 100%;
+}
+form label.top, form div{
+    display: block;
+    padding-top:  0.5rem;
+    color: #111;
+    font-size: 0.8rem;
+}
+form label.top input, form label select, form textarea{
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color:#fff;
+    margin-bottom: 0.5rem;
+}
+form label.topB{
+    display: block;
+    padding-top:  1rem;
+    color: #111;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    max-width: 20rem;
+}
+form label.topB input{
+    width: 90%;
+    margin-right: 0.5rem;
+}
+form label.topB span{
+    padding-right: 2%;
+}
+form label.sbs{
+    display: block;
+    padding: 0.75rem;
+    color: #111;
+    font-size: 0.8rem;
+}
+form input.submitBtn{
+    border: none;
+    background-color: #208aae;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+form label.top input:required{
+    border-left: red solid 6px;
+}
+form label.top input:required:valid{
+    border-left: green solid 6px;
+}
+form input.submitBtn:hover{
+    background-color: #0d2149;
+}
+.thanks{
+    text-align: center;
+}
+.guidelines{
+    margin: 0 1rem;
+}
+/*Contact*/
+div.contact{
+    padding: .5rem 2%;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+div.mapContact{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+div.contact div h3{
+    text-align: center;
+}
+div.contact div iframe{
+    width: 100%;
+}
+div.contact section h3{
+    text-align: center;
+}
+/*Footer*/
+div#footerWrapper {
+    background-color: #1F271B;
+    margin-top: 4rem;
+}
+footer {
+    background-color:#1F271B;
+    margin-top: 0;
+    padding: .5rem 2%;
+    text-align: center;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+footer section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.9rem;
+    margin: 1rem auto;
+}
+footer section img{
+    max-width: 50px;
+
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

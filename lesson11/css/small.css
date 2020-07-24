@@ -56,7 +56,6 @@ div#navWrapper {background-color: #208aae;}
 nav {
     background-color: #208aae;
 }
-
 nav button {
     margin: .2rem 2%;
     background-color: transparent;
@@ -64,8 +63,6 @@ nav button {
     font-size: 1.6rem;
     color: #fff;
 }
-
-
 nav ul {
     list-style-type: none;
     padding: 0;
