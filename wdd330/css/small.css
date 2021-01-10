@@ -1,0 +1,19 @@
+#content {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+header,
+footer {
+    background-color: chocolate;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+}
+ol{
+    font-size: 1.2rem;
+}
+li{
+    padding-bottom: 0.4rem;
+}
