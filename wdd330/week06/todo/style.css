@@ -1,0 +1,56 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+}
+h1{
+    padding-top: 1rem;
+    text-align: center;
+}
+#todos{
+    padding-bottom: 1rem;
+}
+#todos div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-style: solid;
+    border-color: gray;
+}
+#todos div input{
+    grid-column: 1/2;
+}
+#todos div label{
+    grid-column: 2/6;
+}
+#todos div button{
+    grid-column: 6/7;
+}
+.container{
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.todo-filters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 4rem;
+    grid-column-gap: 1rem;
+}
+
+.add-todo{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.add-todo input{
+    height: 30px;   
+    grid-column: 1/4;
+}
+.add-todo button{
+    grid-column: 4/5;
+}
+.line{
+    text-decoration: line-through;
+}

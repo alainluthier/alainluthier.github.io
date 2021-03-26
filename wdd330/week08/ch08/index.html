@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 08</title>
+    <style>
+        .transform {
+            display: block;
+        }
+
+        .red-box {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .red-box-t {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .scale {
+            transform: scale(2, 1);
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+        .red-box-t{
+            background-color: red;
+        }
+        .red-box-t:hover{
+            background-color:yellow;
+            transition-property: background-color;
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+        }
+        .red-box-t:hover {
+            background-color: yellow;
+            transition-property: background-color;
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+        }
+
+        @keyframes test {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -360px 0;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-100px);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
+        }
+
+        .red-box-a {
+            content: '';
+            width: 90px;
+            height: 92px;
+            background-color: blue;
+            display: block;
+            margin: auto;
+            animation:
+                0.4s steps(4, end) infinite 50ms test,
+                8s linear infinite 50ms move;
+            animation-play-state: paused;
+        }
+
+        .red-box-a:hover {
+            animation-play-state: running;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS3 Tansforms and transformations</h2>
+    <h3>Transform</h3>
+    <div class="transform">
+        <div class="red-box">
+        </div>
+        <div class="red-box scale">
+        </div>
+        <div class="red-box rotate">
+        </div>
+    </div>
+    <h3>Transitions</h3>
+    <p>Put mouse over the box</p>
+    <div class="red-box-t transition"></div>
+    <h3>Animation</h3>
+    <p>Put mouse over the box</p>
+    <div class="red-box-a">
+
+    </div>
+</body>
+
+</html>

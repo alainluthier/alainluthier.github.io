@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12</title>
+    <style>
+        .myCanvas {
+            border: dotted 2px black;
+
+        }
+        #ac3{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Canvas, SVG and Drag and Drop</h2>
+    <h3>Canvas</h3>
+    <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+        Sorry! Your browser doesn’t support Canvas.
+    </canvas>
+    <h3>SVG</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="25" fill="red" />
+    </svg>
+    <h3>Drag and Drop</h3>
+    <article id="ac3">
+        <h1>Wai-Aria? HAHA!</h1>
+        <h2 id="catHeading">Form Accessibility</h2>
+
+        <img src="images/cat.jpg" width="300" id="cat" alt="WAI-ARIA Cat">
+
+        <div class="content">
+            <p id="mouseContainer" class="mc">
+                <img src="images/mouse.png" width="80" alt="mouse treat" id="mouse1" draggable="true">
+                <img src="images/mouse.png" width="80" alt="mouse treat" id="mouse2" draggable="true">
+                <img src="images/mouse.png" width="80" alt="mouse treat" id="mouse3" draggable="true">
+            </p>
+        </div>
+    </article>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+        console.log('works!!');
+
+        var mice = document.querySelectorAll("#mouseContainer img");
+        var mouse = null;
+        for (var i = 0; i < mice.length; i++) {
+            mouse = mice[i];
+            mouse.addEventListener("dragstart", function (event) {
+                event.dataTransfer.setData("text/plain", this.id);
+            });
+        }
+        var cat = document.getElementById("cat");
+        cat.addEventListener("dragover", function (event) {
+            event.preventDefault();
+        });
+        cat.addEventListener("drop", function (event) {
+            var mouseHash = {
+                mouse1: 'NOMNOMNOM',
+                mouse2: 'Meow',
+                mouse3: 'Purrrrrr ...'
+            };
+            var mouseID = event.dataTransfer.getData("text/plain");
+            var catHeading = document.getElementById('catHeading');
+            catHeading.innerHTML = mouseHash[mouseID];
+            
+            var mousey = document.getElementById(mouseID);
+            mousey.parentNode.removeChild(mousey);
+            //
+
+        });
+
+    </script>
+</body>
+
+</html>
