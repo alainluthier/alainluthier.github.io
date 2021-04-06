@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallet-App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
 </head>
 <body>
-    <div id="content">
-        <nav>
-            <li></li>
+    <div id="headerWrapper">
+        <header>
+            <img src="images/logo.png" alt="logo">
+            <h1>Wallet App</h1>
+            <button onclick="toogleButton()" >&#9776;</button>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <ul id="primaryNav" class="hide">
+                <!-- <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Categories</a></li>
+                <li><a href="reservations.html">Incomes</a></li>
+                <li><a href="tours.html">Expenses</a></li>
+                <li><a href="contact.html">Report</a></li> -->
+            </ul>
         </nav>
     </div>
+    <main>
+        <div id="content">
+
+        </div>
+    </main>
+    <div id="footerWrapper">
+        <footer>
+            <div>
+                &copy; | Alain R. Ramos | <span id="currentDate"></span>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+/* 64em is also 1028px when basefont is 16px */
+@media only screen and (min-width: 64rem) {
+    nav ul li a{
+        padding: 0.6rem 1rem;
+    }
+    header, nav, main, footer{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    /*FORM BEGIN*/
+    form label.sbs{
+        padding: .4rem 0;
+    }
+    /* INDEX*/
+    /* div.cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    div.cards section {
+        display: block;
+    }
+    div.mapContact{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+    } */
+    /*END INDEX */
+} /*end large */
