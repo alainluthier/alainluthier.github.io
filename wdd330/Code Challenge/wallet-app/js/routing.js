@@ -1,7 +1,7 @@
 import CategoryController from './categoryController.js';
 const routes = [
   {
-    controller: new CategoryController('#categoryList'),
+    controller: new CategoryController('#categoryList',"#category"),
     file: './views/categoryList.html',
     label: 'Categories'
   }

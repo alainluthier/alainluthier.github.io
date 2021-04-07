@@ -1,23 +1,25 @@
 <div class="card">
   <section id="categories">
-    <h1>Categories</h1>
-    <ul id="CategoryList"></ul>
+    <h2>Categories</h2>
+    <a class="button primary add" id="new">New</a>
+    <table class="list" id="categoryList">
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
   </section>
-  <table class="list" id="categoryList">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-      
-    </tbody>
-  </table>
-  <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-    <h3>Add New Category</h3>
+  
+  <form id="#category" autocomplete="off">
+    <a class="button primary back" id="back">Back</a>
+    <h2 id="title">Add Category</h2>
     <div>
         <label>Name</label> <span>*</span>
         <input type="text" name="name" id="name">
@@ -29,8 +31,9 @@
           <option value="Expense">Expense</option>
         </select>
     </div>
-    <div >
-      <input class="button primary save large" type="submit" value="Save">
-  </div>
+    <div>
+      <a class="button primary save large" id="save">Save</a>
+    </div>
+      
   </form>
 </div>

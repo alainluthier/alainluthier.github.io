@@ -1,4 +1,4 @@
-import { getJSON, postJSON } from './utilities.js';
+import { getJSON, postJSON, deleteJSON,putJSON } from './utilities.js';
 // Model
 export default class Category {
   constructor() {
@@ -13,6 +13,16 @@ export default class Category {
   }
   async postCategory(data){
     let category = await postJSON(
+      this.baseUrl +`/category`,data);
+    return category;
+  }
+  async deleteCategory(id){
+    let category = await deleteJSON(
+      this.baseUrl +`/category`,id);
+    return category;
+  }
+  async putCategory(data){
+    let category = await putJSON(
       this.baseUrl +`/category`,data);
     return category;
   }
