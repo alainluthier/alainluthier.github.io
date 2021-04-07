@@ -1,0 +1,45 @@
+<div class="card">
+    <section id="expenses">
+        <h2>Report</h2>
+        <form action="">
+            <div>
+                <label>Type</label><span>*</span>
+                <select name="type" id="type">
+                  <option value="Income">Income</option>
+                  <option value="Expense">Expense</option>
+                </select>
+            </div>
+            <div>
+                <label>Begin Date</label><span>*</span>
+                <input type="date" id="date1" name="date1">
+            </div>
+            <div>
+                <label>End Date</label><span>*</span>
+                <input type="date" id="date2" name="date2">
+            </div>
+            <a class="button primary add" id="search">Search</a>
+        </form>
+        
+        <table class="list" id="report">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <td><b>Total</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="right-align" id="#total">0</td>
+            </tfoot>
+        </table>
+    </section>
+</div>

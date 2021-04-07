@@ -11,6 +11,10 @@ export default class CategoryController {
     this.categories = new Category();
     this.categoriesView = new CategoriesView();
   }
+  clear(){
+
+    document.getElementById("name").value="";
+  }
   async init() {
     this.parentElement = document.querySelector(this.parent + " tbody");
     this.singleElement = document.getElementById(this.single);
@@ -18,6 +22,7 @@ export default class CategoryController {
     this.getCategories();
     document.getElementById("new").addEventListener('click', e => {
       document.getElementById("title").innerHTML = "Add Category";
+      this.clear();
       if (this.singleElement.style.display === "none") {
         this.singleElement.style.display = "block";
         document.getElementById("categories").style.display = "none";
@@ -46,14 +51,15 @@ export default class CategoryController {
           <td>${e.name}</td>
           <td>${e.type}</td>
           <td>
-            <a data-id=${e.id} class="button primary edit" ">Edit</a>
-            <a class="button primary delete" >Delete</a>
+          <a data-id=${e.id} data-action="edit" data-name=${e.name} data-type=${e.type} class="button primary edit" ">Edit</a>
+          <a data-id=${e.id} data-action="delete" class="button primary delete" >Delete</a>
           </td>
         </tr>`;
         });
       }else{
         let index = document.getElementById("save").getAttribute("idxcat");
         let id = document.getElementById("save").getAttribute("idcat");
+        console.log(id);
         this.putCategory({
           'id': id,
           'name': document.getElementById("name").value,
@@ -63,10 +69,11 @@ export default class CategoryController {
           let x = this.parentElement.rows[index].cells;
           x[1].innerHTML=e.name;
           x[2].innerHTML=e.type;
+          x[3].innerHTML=`<a data-id=${e.id} data-action="edit" data-name=${e.name} data-type=${e.type} class="button primary edit" ">Edit</a>
+            <a data-id=${e.id} data-action="delete" class="button primary delete" >Delete</a>`;
         });
       }
       this.show();
-      alert("Updated Successfully");
     });
   }
   hide(id,idx) {
@@ -101,9 +108,8 @@ export default class CategoryController {
           var r = confirm("Are you sure to delete?");
           if (r == true) {
             console.log("Delete:" + e.target.dataset.id);
-            this.parentElement.deleteRow(e.target.parentNode.parentNode.rowIndex - 1);
-            this.deleteCategory(e.target.dataset.id).then(e=>{
-              alert("The category was deleted")
+            this.deleteCategory(e.target.dataset.id).then(a=>{
+              this.parentElement.deleteRow(e.target.parentNode.parentNode.rowIndex - 1);
             });
           }
         }

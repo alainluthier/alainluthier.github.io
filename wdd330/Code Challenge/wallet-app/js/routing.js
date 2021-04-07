@@ -1,14 +1,42 @@
 import CategoryController from './categoryController.js';
+import ExpenseController from './expenseController.js';
+import IncomeController from './incomeController.js';
+import HomeController from './homeController.js';
+import ReportController from './reportController.js';
 const routes = [
+  {
+    controller: new HomeController('#result'),
+    file: './views/home.html',
+    label: 'Home'
+  },
   {
     controller: new CategoryController('#categoryList',"#category"),
     file: './views/categoryList.html',
     label: 'Categories'
+  },
+  {
+    controller: new IncomeController('#incomeList',"#income"),
+    file: './views/incomeList.html',
+    label: 'Incomes'
+  },
+  {
+    controller: new ExpenseController('#expenseList',"#expense"),
+    file: './views/expenseList.html',
+    label: 'Expenses'
+  }
+  ,
+  {
+    controller: new ReportController('#report','#total'),
+    file: './views/report.html',
+    label: 'Reports'
   }
 ];
 // function to create a navigation for the items found in routes.
 // creates element, add a touchend event listener and appends it to parent
-export default function buildNavigation(parent) {
+export function loadHome(){
+  insertViewAsync(getViewAsync(routes[0].file), routes[0].controller);
+}
+export function buildNavigation(parent) {
   routes.forEach(route => {
     let item = document.createElement('li');
     item.innerHTML = `<a href="#${route.label}">${route.label}</a>`;
@@ -21,7 +49,6 @@ export default function buildNavigation(parent) {
 async function getViewAsync(viewPath) {
   try {
     const response = await fetch(viewPath);
-    console.log(response);
     const text = await response.text();
     return text;
   } catch (err) {

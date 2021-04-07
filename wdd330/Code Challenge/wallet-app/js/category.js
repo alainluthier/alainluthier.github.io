@@ -11,6 +11,11 @@ export default class Category {
       this.baseUrl +`/category`);
     return this._categories;
   }
+  async getCategoriesByType(type) {
+    this._categories = await getJSON(
+      this.baseUrl +`/category`);
+    return this._categories.filter(e=>{if(e.type==type) return e;});
+  }
   async postCategory(data){
     let category = await postJSON(
       this.baseUrl +`/category`,data);
